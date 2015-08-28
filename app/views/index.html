@@ -10,7 +10,14 @@
 </head>
 
 <body>
-
+<!--[if lte IE 10]>
+    <div class="ie-alert text-center">
+        亲，我们发现您的浏览器版本过低哦，建议升级您的浏览器，以得到更好的浏览体验。 
+        <a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" title="" target="blank">[微软Internet Explore]</a>
+        <a href="http://www.google.cn/chrome/browser/desktop/index.html" title="" target="blank">[Google Chrome]</a>
+        <a href="http://www.firefox.com.cn/download/" title="" target="blank">[Firefox]</a>
+    </div>
+<![endif]-->
     <header id="header">
         <div class="logo-deloitte"></div>
         <div class="link-box">
@@ -566,10 +573,49 @@
   </div>
 </div>
 <!-- END Modal -->
+<div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" style="display: block; padding-left: 0px;">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <p>
+                        欢迎来到德勤“因我不同“校园招聘空中宣讲会，在接下来的19:30-20:30,我们将在线播放”空中宣讲会“视频，
+                        同时你也可以在FAQ区域，提出你的问题，30位德勤同事将在线为你答疑解惑。
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        你的网申号很重要！同学们可点击右上角的姓名补录自己的网申信息，这将是你参加“笔试直通券”
+                        和“空中有约”的先决条件！
+                    </p>
+                    <ul>
+                        <li>
+                            · 200张笔试直通券怎么抢？今天，我们邀请了来自五个部门的资深导师与大家分享他们工作中的
+                            点点滴滴，每段分享过后，屏幕中间会依次出现5道选择题，回答最快并且正确的同学将直接获得笔试直通券。
+                        </li>
+                        <li>
+                            · 空中有约聊天室怎么进？ 19：30-20：00间，同学们可进入屏幕中间的“空中有约”环节进行报名，
+                            稍后，我们将筛选出100人（每个房间20人）于20：30-21：00间进入聊天室，和5位德勤资深导师
+                            进行互动，空前强大的导师阵容，让你绝对不虚此行。
+                        </li>
+                        <li>
+                            · 我的问题没有被在线回复肿么整？在今天活动结束后的24小时，我们将对平台上的所有问题进行解答，
+                            并将于9/1推送至各位的手机上。
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <p>Make your career with us to make an impact.</p>
+                    <p>加入德勤，因我不同！</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../resources/js/jquery.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>
     <script>
     $(document).ready(function(){
+        $('#hintModal').modal();
         $(window).on('scroll', function(e) {
             var topValue = $(this).scrollTop();
             if(topValue > 687){
