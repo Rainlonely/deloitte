@@ -1,0 +1,97 @@
+@import 'global.less';
+.tab-content{width: 100%;}
+.filter-box {
+    display: flex;
+    flex-direction: column;
+    .filter-line {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        label {
+            margin: auto 0;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            width: 95%;
+            li {
+                float: left;
+                margin: 0 10px;
+                padding: 0 10px;
+            }
+            .selected {
+                background-color: @brand-sub;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.faq-lists {
+    display: flex;
+    flex-direction: column;
+    .faq-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px dashed @brand-primary;
+        padding: 5px 0;
+        h4 {
+            color: @brand-primary;
+            font-size: 14px;
+            input[type="checkbox"]{margin-right: 10px;}
+        }
+        .faq-info{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.pagination{
+	margin-top: 40px!important;
+}
+
+.modal {
+    .info-row {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+    }
+    textarea {
+        height: 100px;
+    }
+    .table-assign {
+        width: 100%;
+        border: 1px solid @brand-sub;
+        thead {
+            background-color: @brand-primary;
+            color: #fff;
+            th{
+            	border: 1px solid @brand-sub;
+            	text-align: center;
+            }
+        }
+        tbody {
+        	border: 1px solid @brand-sub;
+            tr {
+                td:nth-child(1) {
+                    background-color: @brand-primary;
+                    color: #fff;
+                    text-align: center;
+                }
+                td{
+                	border: 1px solid @brand-sub;
+                	padding-left: 10px;
+                	a{display: block;}
+                	input[type="radio"]{
+                		float: left;
+                		margin-right: 10px;
+                	}
+                }
+            }
+        }
+    }
+}

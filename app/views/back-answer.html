@@ -1,0 +1,285 @@
+6<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>后台管理-报名管理</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/back-faq.min.css">
+
+</head>
+
+<body>
+    <header>
+    	<div class="container">
+    		<h3>空中宣讲会管理系统</h3>
+		    <div class="user-box">
+		    	<figure></figure>
+		    	<span>USER NAME</span>
+		    	<a href="" title="">登出</a>
+		    </div>	
+    	</div>
+    </header>
+    <nav>
+    	<div class="container">
+    	<ul>
+        	<li><a href="" title="">报名管理</a></li>
+        	<li><a href="" title="">FAQ管理</a><i class="icon-alert"></i></li>
+            <li class="active"><a href="" title="">问答管理</a><i class="icon-alert-info">3</i></li>
+        	<li><a href="" title="">抢答管理</a></li>
+        	<li><a href="" title="">抢答列表</a></li>
+        </ul>
+    	</div>
+    </nav>
+    <div class="main container">
+        <aside>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#answer" aria-controls="list-wait" role="tab" data-toggle="tab">待解答（12）</a></li>
+                <li role="presentation"><a href="#answered" aria-controls="list-done" role="tab" data-toggle="tab">已解答</a></li>
+                <li role="presentation"><a href="#allanswered" aria-controls="list-done" role="tab" data-toggle="tab">全部解答</a></li>
+            </ul>
+        </aside>
+        <div class="right-side">
+            <div class="filter-box">
+                <div class="filter-line">
+                    <label>地区：</label>
+                    <ul class="filter-distract">
+                        <li >华东</li>
+                        <li >华北</li>
+                        <li class="selected">华南</li>
+                        <li >香港</li>
+                    </ul>
+                </div>
+                <div class="filter-line">
+                    <label>分类：</label>
+                    <ul class="filter-categary">
+                        <li >全部</li>
+                        <li >网申请</li>
+                        <li >招聘流程</li>
+                        <li >其他</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="answer">
+                    <ul class="faq-lists">
+                        <li class="faq-list">
+                            <div class="faq-info">
+                                <h4>德勤成都预计会招多少学生？</h4>
+                                <div class="row-bottom">
+                                    <span class="date">3分钟前</span>
+                                    <div class="tag-box">
+                                        <span>西部</span><span>其他</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <button class="btn btn-link-color" type="button" data-toggle="modal" data-target="#answer-box">解答</button> 
+                                <button class="btn btn-gray" data-toggle="modal" data-target="#reject-box">回绝</button>
+                            </div>
+                        </li>
+                        <li class="faq-list">
+                            <div class="faq-info">
+                                <h4>德勤成都预计会招多少学生？</h4>
+                                <div class="row-bottom">
+                                    <span class="date">3分钟前</span>
+                                    <div class="tag-box">
+                                        <span>西部</span><span>其他</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <button class="btn btn-link-color" type="button" data-toggle="modal" data-target="#answer-box">解答</button> 
+                                <button class="btn btn-gray" data-toggle="modal" data-target="#reject-box">回绝</button>
+                            </div>
+                        </li>
+                        <li class="faq-list">
+                            <div class="faq-info">
+                                <h4>德勤成都预计会招多少学生？</h4>
+                                <div class="row-bottom">
+                                    <span class="date">10分钟前</span>
+                                    <div class="tag-box">
+                                        <span>西部</span><span>其他</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <button class="btn btn-link-color" type="button" data-toggle="modal" data-target="#answer-box">解答</button> 
+                                <button class="btn btn-gray" data-toggle="modal" data-target="#reject-box">回绝</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="answered">
+                    <ul class="faq-lists">
+                        <li class="faq-list">
+                            <div class="faq-info">
+                                <h4>德勤成都预计会招多少学生？</h4>
+                                <div class="row-bottom">
+                                    <span class="date">3分钟前</span>
+                                    <div class="tag-box">
+                                        <span>西部</span><span>其他</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <button class="btn btn-brand-sub" data-toggle="modal" data-target="#answer-box" >修改</button> 
+                            </div>
+                        </li>
+                        <li class="faq-list">
+                            <div class="faq-info">
+                                <h4>德勤成都预计会招多少学生？</h4>
+                                <div class="row-bottom">
+                                    <span class="date">3分钟前</span>
+                                    <div class="tag-box">
+                                        <span>西部</span><span>其他</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <button class="btn btn-brand-sub" data-toggle="modal" data-target="#answer-box">修改</button> 
+                            </div>
+                        </li>
+                        <li class="faq-list">
+                            <div class="faq-info">
+                                <h4>德勤成都预计会招多少学生？</h4>
+                                <div class="row-bottom">
+                                    <span class="date">10分钟前</span>
+                                    <div class="tag-box">
+                                        <span>西部</span><span>其他</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <button class="btn btn-brand-sub" data-toggle="modal" data-target="#answer-box">修改</button> 
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="allanswered">
+                    <ul class="faq-lists">
+                        <li class="faq-list">
+                            <div class="faq-info">
+                                <h4><input type="checkbox">德勤成都预计会招多少学生？</h4>
+                                <div class="row-bottom">
+                                    <span class="date">3分钟前</span>
+                                    <div class="tag-box">
+                                        <span>西部</span><span>其他</span>
+                                    </div>
+                                </div>
+                                <div class="answer-box">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <span class="btn btn-primary">$嘉宾Name$的回答：</span>
+                            </div>
+                        </li>
+                        <li class="faq-list">
+                            <div class="faq-info">
+                                <h4><input type="checkbox">德勤成都预计会招多少学生？</h4>
+                                <div class="row-bottom">
+                                    <span class="date">3分钟前</span>
+                                    <div class="tag-box">
+                                        <span>西部</span><span>其他</span>
+                                    </div>
+                                </div>
+                                <div class="answer-box">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <span class="btn btn-primary">$嘉宾Name$的回答：</span>
+                            </div>
+                        </li>
+                        <li class="faq-list">
+                            <div class="faq-info">
+                                <h4><input type="checkbox">德勤成都预计会招多少学生？</h4>
+                                <div class="row-bottom">
+                                    <span class="date">10分钟前</span>
+                                    <div class="tag-box">
+                                        <span>西部</span><span>其他</span>
+                                    </div>
+                                </div>
+                                <div class="answer-box">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                                </div>
+                            </div>
+                            <div class="action-box">
+                                <span class="btn btn-primary">$嘉宾Name$的回答：</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="pagination pull-right">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span class="fa fa-angle-left "></span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span class="fa fa-angle-right"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Answer Modal -->
+<div class="modal fade" id="answer-box" tabindex="-1" role="dialog" aria-labelledby="answer-box">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">德勤成都预计会招多少学生？</h4>
+      </div>
+      <div class="modal-body">
+        <div class="info-row">
+            <div class="tag-box">
+             <span>海外</span><span>面试</span>
+            </div>
+            <span class="date">张三与10分钟前提出</span>    
+        </div>
+        <textarea maxlength="1000" class="form-control"></textarea>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<!--Reject Modal -->
+<div class="modal fade" id="reject-box" tabindex="-1" role="dialog" aria-labelledby="reject-box">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">德勤成都预计会招多少学生？</h4>
+      </div>
+      <div class="modal-body">
+        <textarea maxlength="40" class="form-control" placeholder="请输入你的回绝理由"></textarea>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
+</body>
+
+</html>
