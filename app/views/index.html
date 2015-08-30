@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<!--[if lte IE 10]>
+    <!--[if lte IE 10]>
     <div class="ie-alert text-center">
         亲，我们发现您的浏览器版本过低哦，建议升级您的浏览器，以得到更好的浏览体验。 
         <a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" title="" target="blank">[微软Internet Explore]</a>
@@ -27,14 +27,14 @@
                     <li><span>Rain</span>回答了您的问题<span>“在四大是不是一定要考CPA”</span>：是的一定要的。</li>
                     <li><span>Rain</span>回答了您的问题<span>“在四大是不是一定要考CPA”</span>：是的一定要的。</li>
                     <li><span>Rain</span>回答了您的问题<span>“在四大是不是一定要考CPA”</span>：是的一定要的。</li>
-                </ul>    
+                </ul>
             </div>
             <a href="">网申通道</a>
         </div>
     </header>
-    <section class="banner-top container">
+    <!-- <section class="banner-top container">
         <h3>距宣讲会开始还有：<span>15天 02小时 33分 44秒</span></h3>
-    </section>
+    </section> -->
     <!-- <section class="video-box">
         <div class="container">
             <div class="video"></div>
@@ -52,6 +52,39 @@
             </div>    
         </div>
     </section> -->
+    <section id="J_video" class="video-box">
+        <div class="container">
+            <div id="J_video_source" class="video">
+                <div id="mep_0" class="mejs-container mejs-video" style="width: 100%; height: 100%;">
+                    <div class="mejs-inner">
+                        <div class="mejs-mediaelement">
+                            <video id="videoId" width="100%" height="100%" src="../resources/images/codeschool_1493.mp4">
+                                <source src="../resources/images/codeschool_1493.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        
+                        <div class="mejs-controls" style="display: block; visibility: hidden;"></div>
+                        <div class="mejs-clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="video_complate" style="display: none">
+                <img src="/Images/homepage_countdown.png">
+            </div>
+            <div class="right-side">
+                <div class="fix-nav">
+                    <h3>德勤2015校园招聘空中宣讲会 </h3>
+                    <ul>
+                        <li class="active"><a href="" title="">在线FAQ</a></li>
+                        <li><a href="" title="">嘉宾介绍</a></li>
+                        <li><a href="" title="">空中有约</a></li>
+                        <li><a href="" title="">笔试直通券</a></li>
+                    </ul>
+                </div>
+                <button class="btn-link-blue btn_show_ask_modal" data-toggle="modal">我要提问</button>
+            </div>
+        </div>
+    </section>
     <nav class="container">
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active">
@@ -211,61 +244,80 @@
                 <li class="col-xs-3">
                     <div class="tutor-card">
                         <div class="tutor-info">
-                            <figure class="avatar" style="background-image: url(../resources/images/avatar.png)"></figure>
-                            <span class="tutor-name">Rain Wu</span>
-                            <span class="tutor-title">首席前端吧啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>   
+                            <figure class="avatar" style="background-image: url(../resources/images/papa.png)"></figure>
+                            <span class="tutor-name">趴趴顾问团</span>
                         </div>
                         <div>
                             <button class="btn-blue" data-toggle="modal" data-target="#questionModal">向他提问</button>
-                        </div>  
+                        </div>
                     </div>
                 </li>
                 <li class="col-xs-3">
                     <div class="tutor-card">
                         <div class="tutor-info">
-                            <figure class="avatar" style="background-image: url(../resources/images/avatar.png)"></figure>
-                            <span class="tutor-name">Rain Wu</span>
-                            <span class="tutor-title">首席前端吧啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>   
+                            <figure class="avatar" style="background-image: url(../resources/images/ec.png)"></figure>
+                            <span class="tutor-name">德勤华东区HR</span>
                         </div>
                         <div>
-                            <button class="btn-blue" data-toggle="modal" data-target="#successModal">向他提问</button>
-                        </div>  
+                            <button class="btn-blue" data-toggle="modal" data-target="#questionModal">向他提问</button>
+                        </div>
                     </div>
                 </li>
                 <li class="col-xs-3">
                     <div class="tutor-card">
                         <div class="tutor-info">
-                            <figure class="avatar" style="background-image: url(../resources/images/avatar.png)"></figure>
-                            <span class="tutor-name">Rain Wu</span>
-                            <span class="tutor-title">首席前端吧啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>   
+                            <figure class="avatar" style="background-image: url(../resources/images/hk.png)"></figure>
+                            <span class="tutor-name">德勤香港HR</span>
                         </div>
                         <div>
-                            <button class="btn-blue">向他提问</button>
-                        </div>  
+                            <button class="btn-blue" data-toggle="modal" data-target="#questionModal">向他提问</button>
+                        </div>
                     </div>
                 </li>
                 <li class="col-xs-3">
                     <div class="tutor-card">
                         <div class="tutor-info">
-                            <figure class="avatar" style="background-image: url(../resources/images/avatar.png)"></figure>
-                            <span class="tutor-name">Rain Wu</span>
-                            <span class="tutor-title">首席前端吧啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</span>   
+                            <figure class="avatar" style="background-image: url(../resources/images/nc.png)"></figure>
+                            <span class="tutor-name">德勤华北区HR</span>
                         </div>
                         <div>
-                            <button class="btn-blue">向他提问</button>
-                        </div>  
+                            <button class="btn-blue" data-toggle="modal" data-target="#questionModal">向他提问</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xs-3">
+                    <div class="tutor-card">
+                        <div class="tutor-info">
+                            <figure class="avatar" style="background-image: url(../resources/images/scml.png)"></figure>
+                            <span class="tutor-name">德勤华南大陆HR</span>
+                        </div>
+                        <div>
+                            <button class="btn-blue" data-toggle="modal" data-target="#questionModal">向他提问</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xs-3">
+                    <div class="tutor-card">
+                        <div class="tutor-info">
+                            <figure class="avatar" style="background-image: url(../resources/images/wr.png)"></figure>
+                            <span class="tutor-name">德勤华西区HR</span>
+                        </div>
+                        <div>
+                            <button class="btn-blue" data-toggle="modal" data-target="#questionModal">向他提问</button>
+                        </div>
                     </div>
                 </li>
             </ul>
         </div>
         <div role="tabpanel" class="row tab-pane" id="tab-dating">
-            <p>空中有约：如果你有关于职业选择的困惑，有对工作内容的好奇，有对未来发展的期待，那么请跟我来。在8月31号19:30-20:00间，同学们可点击下方的按钮进行报名。稍后，我们将筛选出100人（每个房间20人）于20:30-21:00间进入聊天室，和5位德勤资深导师进行互动，空前强大的导师阵容，让你绝对不虚此行。</p>
+            <p>空中有约：如果你有关于职业选择的困惑，有对工作内容的好奇，有对未来发展的期待，那么请跟我来。在8月31号19：30-20：00间，同学们可点击下方的按钮进行报名。稍后，我们将筛选出120人（每个房间20人）于20：30-21：00间进入聊天室，和6位德勤资深导师进行互动，空前强大的导师阵容，让你绝对不虚此行。请记住，必须要先网申，先网申，先网申。</p>
             <ul class="room-box">
                 <li class="room-list">
                     <header>
                         <span>德勤审计</span>
                         <button class="btn-blue">我要报名</button>
-                    </header><!-- /header -->
+                    </header>
+                    <!-- /header -->
                     <div class="room-info">
                         <div class="room-owner">
                             <figure class="avatar" style="background-image: url(../resources/images/grantpan.png)"></figure>
@@ -279,7 +331,8 @@
                     <header>
                         <span>德勤税务</span>
                         <button class="btn-green">已报名</button>
-                    </header><!-- /header -->
+                    </header>
+                    <!-- /header -->
                     <div class="room-info">
                         <div class="room-owner">
                             <figure class="avatar" style="background-image: url(../resources/images/liangjie.png)"></figure>
@@ -293,7 +346,8 @@
                     <header>
                         <span>德勤企业风险管理</span>
                         <button class="btn-blue">我要报名</button>
-                    </header><!-- /header -->
+                    </header>
+                    <!-- /header -->
                     <div class="room-info">
                         <div class="room-owner">
                             <figure class="avatar" style="background-image: url(../resources/images/terencetang.png)"></figure>
@@ -307,7 +361,8 @@
                     <header>
                         <span>德勤财务咨询服务</span>
                         <button class="btn-blue">我要报名</button>
-                    </header><!-- /header -->
+                    </header>
+                    <!-- /header -->
                     <div class="room-info">
                         <div class="room-owner">
                             <figure class="avatar" style="background-image: url(../resources/images/jaimiecheung.png)"></figure>
@@ -321,7 +376,8 @@
                     <header>
                         <span>德勤企业管理咨询</span>
                         <button class="btn-blue">我要报名</button>
-                    </header><!-- /header -->
+                    </header>
+                    <!-- /header -->
                     <div class="room-info">
                         <div class="room-owner">
                             <figure class="avatar" style="background-image: url(../resources/images/xujiao.png)"></figure>
@@ -335,7 +391,8 @@
                     <header>
                         <span>重庆地区职位招聘</span>
                         <button class="btn-blue">我要报名</button>
-                    </header><!-- /header -->
+                    </header>
+                    <!-- /header -->
                     <div class="room-info">
                         <div class="room-owner">
                             <figure class="avatar" style="background-image: url(../resources/images/lijun.png )"></figure>
@@ -343,9 +400,9 @@
                             重庆税务部门高级经理</span>
                         </div>
                         <div class="room-owner">
-                            <figure class="avatar" style="background-image: url(../resources/images/kongdan.png)"></figure>
-                            <span>嘉宾:Kong Dan<br>
-                            华西区客户，行业与市场战略部总监</span>
+                            <figure class="avatar" style="background-image: url(../resources/images/totalchow.png)"></figure>
+                            <span>嘉宾:Total Chow<br>
+                            重庆企业风险管理部门合伙人</span>
                         </div>
                         <span class="room-status">目前已有 672 位小伙伴报名</span>
                     </div>
@@ -353,7 +410,7 @@
             </ul>
         </div>
         <div role="tabpanel" class="row tab-pane" id="tab-direct">
-            <p>笔试直通券：在视频播放过程中，会有5道选择题依次出现在屏幕中间，请同学们现场抢答，回答最快并且正确的同学将收到屏幕弹窗提醒，获得笔试直通券一张，你将可以直接跳过网申筛选环节。获得笔试直通券的大前提是， 你必须已经网申，同学们可在右上角的“姓名”补录自己的网申信息。</p>
+            <p>笔试直通券：在视频播放过程中，会有5道选择题依次出现在屏幕中间（每道题发放40张直通券），请同学们现场抢答，回答快且准的同学将收到屏幕弹窗提醒，获得笔试直通券一张，你将可以直接跳过网申筛选环节。请记住，必须要先网申，先网申，先网申。</p>
             <section class="list-box">
                 <header>笔试直通券</header>
                 <!-- /header -->
@@ -370,176 +427,178 @@
                         </div>
                         <button class="btn-link-gray">暂未公布</button>
                     </li>
-                    
                     <ul>
             </section>
         </div>
-    </div>   
+    </div>
     <footer>
         <div class="container">
             <div>
                 <a href="http://www.deloitte.com" title="">
-                <img src="../resources/images/deloitte.png" height="28">
+                    <img src="../resources/images/deloitte.png" height="28">
                 </a>
                 <a href="http://careerfrog.com.cn" title="">
-                <img src="../resources/images/cf.png" height="18">
+                    <img src="../resources/images/cf.png" height="18">
                 </a>
                 <a href="http://8dianhou.com">
-                <img src="../resources/images/8dianhou.png" height="20">
+                    <img src="../resources/images/8dianhou.png" height="20">
                 </a>
             </div>
-            <p>本次空中宣讲会由CareerFrog 旗下一对一经验分享平台 <a href="http://8dianhou.com" title="">「8点后」</a>提供全面支持</p>    
+            <p>本次空中宣讲会由CareerFrog 旗下一对一经验分享平台 <a href="http://8dianhou.com" title="">「8点后」</a>提供全面支持</p>
         </div>
     </footer>
-
-<!-- ASK Question Modal -->
-<div class="modal fade" id="listModal" tabindex="-1" role="dialog" aria-labelledby="listModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="listModalLabel">第一轮在线抢答笔试直通券获得者名单</h4>
-      </div>
-      <div class="modal-body">
-        <table>
-            <thead>
-                <tr>
-                    <th>姓名</th>
-                    <th>学校</th>
-                    <th>毕业年份</th>
-                    <th>邮箱</th>
-                    <th>手机号码</th>
-                    <th>回答时间</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>屌丝</td>
-                    <td>上海屌丝大学</td>
-                    <td>2016-08</td>
-                    <td>asdfas@jsdis.csds</td>
-                    <td>(86)138****0000</td>
-                    <td>2015-07-23 18:00</td>
-                </tr>
-                <tr>
-                    <td>屌丝</td>
-                    <td>上海屌丝大学</td>
-                    <td>2016-08</td>
-                    <td>asdfas@jsdis.csds</td>
-                    <td>(86)138****0000</td>
-                    <td>2015-07-23 18:00</td>
-                </tr>
-                <tr>
-                    <td>屌丝</td>
-                    <td>上海屌丝大学</td>
-                    <td>2016-08</td>
-                    <td>asdfas@jsdis.csds</td>
-                    <td>(86)138****0000</td>
-                    <td>2015-07-23 18:00</td>
-                </tr>
-            </tbody>
-        </table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-blue">我已了解</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END Modal -->
-<!-- ASK Question Modal -->
-<div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="questionModalLabel">发出提问</h4>
-      </div>
-      <div class="modal-body">
-        <div class="avatar-box">
-            <figure class="avatar" style="background-image: url(../resources/images/avatar.png)"></figure>
-            <div class="avatar-info">
-                同学你好，我是NAME，TITLE，很高兴能接受你的提问
-            </div>
-        </div>
-        <div class="question-box">
-            <label>描述问题</label>
-            <textarea placeholder="请用简洁的语言描述你的问题"></textarea>
-        </div>
-        <div class="filter-box">
-                <div class="line">
-                    <label>地区</label>
-                    <ul>
-                        <li class="select">华东</li>
-                        <li>华北</li>
-                        <li>华西</li>
-                        <li>华南</li>
-                        <li>香港</li>
-                    </ul>
+    <!-- ASK Question Modal -->
+    <div class="modal fade" id="listModal" tabindex="-1" role="dialog" aria-labelledby="listModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="listModalLabel">第一轮在线抢答笔试直通券获得者名单</h4>
                 </div>
-                <div class="line">
-                    <label>分类</label>
-                    <ul>
-                        <li>全部</li>
-                        <li>网申</li>
-                        <li>招聘流程</li>
-                        <li>申请港澳地区职位</li>
-                        <li>考试支持（CICPA）</li>
-                        <li>其他</li>
-                    </ul>
+                <div class="modal-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>学校</th>
+                                <th>毕业年份</th>
+                                <th>邮箱</th>
+                                <th>手机号码</th>
+                                <th>回答时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>屌丝</td>
+                                <td>上海屌丝大学</td>
+                                <td>2016-08</td>
+                                <td>asdfas@jsdis.csds</td>
+                                <td>(86)138****0000</td>
+                                <td>2015-07-23 18:00</td>
+                            </tr>
+                            <tr>
+                                <td>屌丝</td>
+                                <td>上海屌丝大学</td>
+                                <td>2016-08</td>
+                                <td>asdfas@jsdis.csds</td>
+                                <td>(86)138****0000</td>
+                                <td>2015-07-23 18:00</td>
+                            </tr>
+                            <tr>
+                                <td>屌丝</td>
+                                <td>上海屌丝大学</td>
+                                <td>2016-08</td>
+                                <td>asdfas@jsdis.csds</td>
+                                <td>(86)138****0000</td>
+                                <td>2015-07-23 18:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-blue">我已了解</button>
                 </div>
             </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-blue">提问</button>
-        <button type="button" class="btn-link-gray" data-dismiss="modal">取消</button>
-      </div>
+        </div>
     </div>
-  </div>
-</div>
-<!-- END Modal -->
-<!-- TEST Modal -->
-<div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="testModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="testModalLabel">在线测试</h4>
-      </div>
-      <div class="modal-body">
-        <p class="test-question">以下哪块业务不是德勤的核心业务？</p>
-        <ul>
-            <li><input type="radio" >Audit  </li>
-            <li><input type="radio" >TAX  </li>
-            <li><input type="radio" >asdf  </li>
-            <li><input type="radio" >trergerg  </li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-blue">提交</button>
-        <button type="button" class="btn-link-gray" data-dismiss="modal">放弃抢答</button>
-      </div>
+    <!-- END Modal -->
+    <!-- ASK Question Modal -->
+    <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="questionModalLabel">发出提问</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="avatar-box">
+                        <figure class="avatar" style="background-image: url(../resources/images/avatar.png)"></figure>
+                        <div class="avatar-info">
+                            同学你好，我是NAME，TITLE，很高兴能接受你的提问
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <label>描述问题</label>
+                        <textarea placeholder="请用简洁的语言描述你的问题"></textarea>
+                    </div>
+                    <div class="filter-box">
+                        <div class="line">
+                            <label>地区</label>
+                            <ul>
+                                <li class="select">华东</li>
+                                <li>华北</li>
+                                <li>华西</li>
+                                <li>华南</li>
+                                <li>香港</li>
+                            </ul>
+                        </div>
+                        <div class="line">
+                            <label>分类</label>
+                            <ul>
+                                <li>全部</li>
+                                <li>网申</li>
+                                <li>招聘流程</li>
+                                <li>申请港澳地区职位</li>
+                                <li>考试支持（CICPA）</li>
+                                <li>其他</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-blue">提问</button>
+                    <button type="button" class="btn-link-gray" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<!-- END Modal -->
-<!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <!-- <div class="modal-header text-center">
+    <!-- END Modal -->
+    <!-- TEST Modal -->
+    <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="testModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="testModalLabel">在线测试</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="test-question">以下哪块业务不是德勤的核心业务？</p>
+                    <ul>
+                        <li>
+                            <input type="radio">Audit </li>
+                        <li>
+                            <input type="radio">TAX </li>
+                        <li>
+                            <input type="radio">asdf </li>
+                        <li>
+                            <input type="radio">trergerg </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-blue">提交</button>
+                    <button type="button" class="btn-link-gray" data-dismiss="modal">放弃抢答</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Modal -->
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header text-center">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="testModalLabel">在线测试</h4>
       </div> -->
-      <div class="modal-body">
-        <input type="text" placeholder="输入您的姓名">
-        <input type="text" placeholder="输入您的手机号">
-        <button type="button" class="btn-blue">确定</button>
-        <p>预报名用户请输入预报名时填写的信息</p>
-      </div>
-      <div class="modal-footer">
-        <p>Powered by <a href="http://www.8dianhou.com" title="">8点后</a></p>
-        <p>登录即表示您同意8点后<a href="http://www.8dianhou.com/doc/agreement">用户协议</a>及<a href="http://www.8dianhou.com/doc/privacy">隐私条款<a></p>
+                <div class="modal-body">
+                    <input type="text" placeholder="输入您的姓名">
+                    <input type="text" placeholder="输入您的手机号">
+                    <button type="button" class="btn-blue">确定</button>
+                    <p>预报名用户请输入预报名时填写的信息</p>
+                </div>
+                <div class="modal-footer">
+                    <p>Powered by <a href="http://www.8dianhou.com" title="">8点后</a></p>
+                    <p>登录即表示您同意8点后<a href="http://www.8dianhou.com/doc/agreement">用户协议</a>及<a href="http://www.8dianhou.com/doc/privacy">隐私条款<a></p>
       </div>
     </div>
   </div>
@@ -579,28 +638,22 @@
                 <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <p>
-                        欢迎来到德勤“因我不同“校园招聘空中宣讲会，在接下来的19:30-20:30,我们将在线播放”空中宣讲会“视频，
-                        同时你也可以在FAQ区域，提出你的问题，30位德勤同事将在线为你答疑解惑。
+                        欢迎来到德勤“因我不同”2016校园招聘空中宣讲会。今晚，您将在19:30-20:20观看到德勤5位资深导师的成功故事，我们的校招流程和德勤中国的业务发展。同时，您可以在FAQ区域提出问题，30位德勤同事将为你答疑解惑。
                     </p>
                 </div>
                 <div class="modal-body">
                     <p>
-                        你的网申号很重要！同学们可点击右上角的姓名补录自己的网申信息，这将是你参加“笔试直通券”
-                        和“空中有约”的先决条件！
+                        <b>你的网申号和学校信息很重要</b>，这是参加“笔试直通券”和“空中有约”的先决条件！同学们可点击右上角的“你的姓名”处补录或修改自己的网申信息。
                     </p>
                     <ul>
                         <li>
-                            · 200张笔试直通券怎么抢？今天，我们邀请了来自五个部门的资深导师与大家分享他们工作中的
-                            点点滴滴，每段分享过后，屏幕中间会依次出现5道选择题，回答最快并且正确的同学将直接获得笔试直通券。
+                            <b>200张笔试直通券怎么抢？</b>在视频播放过程中，会有5道选择题依次出现在屏幕中间（每道题发放40张直通券），回答快且准的同学将收到屏幕弹窗提醒，获得笔试直通券一张，你将可以直接跳过网申筛选环节。请记住，必须要先网申，先网申，先网申。
                         </li>
                         <li>
-                            · 空中有约聊天室怎么进？ 19：30-20：00间，同学们可进入屏幕中间的“空中有约”环节进行报名，
-                            稍后，我们将筛选出100人（每个房间20人）于20：30-21：00间进入聊天室，和5位德勤资深导师
-                            进行互动，空前强大的导师阵容，让你绝对不虚此行。
+                            <b>空中有约聊天室怎么进？</b>如果你有关于职业选择的困惑，有对工作内容的好奇，有对未来发展的期待，那么请跟我来。在8月31号19：30-20：00间，同学们可点击下方的按钮进行报名。稍后，我们将筛选出120人（每个房间20人）于20：30-21：00间进入聊天室，和6位德勤资深导师进行互动，空前强大的导师阵容，让你绝对不虚此行。请记住，必须要先网申，先网申，先网申。
                         </li>
                         <li>
-                            · 我的问题没有被在线回复肿么整？在今天活动结束后的24小时，我们将对平台上的所有问题进行解答，
-                            并将于9/1推送至各位的手机上。
+                            <b>我的问题没有被在线回复怎么办？</b>在今天活动结束后的24小时，我们将对平台上的所有问题进行解答，并将于9/1推送至各位的手机上。
                         </li>
                     </ul>
                 </div>
