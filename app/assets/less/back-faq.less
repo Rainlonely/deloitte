@@ -32,11 +32,12 @@
 .faq-lists {
     display: flex;
     flex-direction: column;
+    .faq-list:first-child{border: 0;}
     .faq-list {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        border-bottom: 1px dashed @brand-primary;
+        border-top: 1px dashed @brand-primary;
         padding: 5px 0;
         h4 {
             color: @brand-primary;
@@ -46,6 +47,26 @@
         .faq-info{
             display: flex;
             align-items: center;
+            h4{
+                line-height: 21px;
+                .tag{
+                    background-color: #555; 
+                    color: #fff; 
+                    margin: 0 10px; 
+                    padding: 2px 5px;
+                    font-size: 12px;
+                }
+                .date{
+                    color: gray;
+                }
+            }
+        }
+        .action-box{
+            .btn{
+                margin: 5px; 
+                padding: 2px 5px;
+
+            }
         }
     }
 }

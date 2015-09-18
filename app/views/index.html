@@ -62,7 +62,6 @@
                                 <source src="../resources/images/codeschool_1493.mp4" type="video/mp4">
                             </video>
                         </div>
-                        
                         <div class="mejs-controls" style="display: block; visibility: hidden;"></div>
                         <div class="mejs-clear"></div>
                     </div>
@@ -81,7 +80,7 @@
                         <li><a href="" title="">笔试直通券</a></li>
                     </ul>
                 </div>
-                <button class="btn-link-blue btn_show_ask_modal" data-toggle="modal">我要提问</button>
+                <button class="btn-link-blue btn_show_ask_modal" data-toggle="modal" data-target="#selectTutorModal">我要提问</button>
             </div>
         </div>
     </section>
@@ -100,7 +99,7 @@
                 <a href="#tab-direct" aria-controls="tab-direct" role="tab" data-toggle="tab">笔试直通券</a>
             </li>
         </ul>
-        <button class="pull-right btn-blue" data-toggle="modal" data-target="#loginModal">我要提问</button>
+        <button class="pull-right btn-blue" data-toggle="modal" data-target="#selectTutorModal">我要提问</button>
     </nav>
     <div class="tab-content container">
         <div role="tabpanel" class="row tab-pane active" id="tab-faq">
@@ -177,6 +176,7 @@
                         贺同学 3分钟前提出
                     </span>
                     </li>
+                    <li class="text-center"><a href="#" title="">显示更多</a></li>
                     <ul>
             </section>
             <section class="list-box">
@@ -586,23 +586,40 @@
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <!-- <div class="modal-header text-center">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="testModalLabel">在线测试</h4>
-      </div> -->
                 <div class="modal-body">
-                    <input type="text" placeholder="输入您的姓名">
-                    <input type="text" placeholder="输入您的手机号">
+                    <input type="text" name="username" placeholder="输入您的姓名">
+                    <select id="select-country">
+                        <option value="86">中国(+86)</option>
+                        <option value="1">美国(+1)</option>
+                        <option value="1">加拿大(+1)</option>
+                        <option value="44">英国(+44)</option>
+                        <option value="61">澳大利亚(+61)</option>
+                        <option value="49">德国(+49)</option>
+                        <option value="33">法国(+33)</option>
+                        <option value="81">日本(+81)</option>
+                        <option value="852">香港(+852)</option>
+                        <option value="65">新加坡(+65)</option>
+                        <option value="886">台湾(+886)</option>
+                        <option value="64">新西兰(+64)</option>
+                        <option value="82">韩国(+82)</option>
+                        <option value="353">爱尔兰(+353)</option>
+                        <option value="31">荷兰(+31)</option>
+                    </select>
+                    <i class="fa fa-angle-down"></i>
+                <input type="text" name="phone" placeholder="输入您的手机号">
                     <button type="button" class="btn-blue">确定</button>
                     <p>预报名用户请输入预报名时填写的信息</p>
+                    <p class="hint">
+                        登录遇到问题，可致电：400-642-0080或发送邮件至 natyan@deloitte.com.cn邮件请注明手机号和姓名
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <p>Powered by <a href="http://www.8dianhou.com" title="">8点后</a></p>
-                    <p>登录即表示您同意8点后<a href="http://www.8dianhou.com/doc/agreement">用户协议</a>及<a href="http://www.8dianhou.com/doc/privacy">隐私条款<a></p>
-      </div>
+                    <p>登录即表示您同意8点后<a href="http://www.8dianhou.com/doc/agreement">用户协议</a>及<a href="http://www.8dianhou.com/doc/privacy">隐私条款</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 <!-- END Modal -->
 <!-- Success Modal -->
 <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel">
@@ -610,9 +627,9 @@
     <div class="modal-content">
       <div class="modal-body">
         <img src="../resources/images/congratulations.png" height="81" width="186" alt="">
-        <h4>恭喜你</h4>
-        <p>获得德勤2016校园招聘笔试直通卡！</p>
-        <button class="btn-blue">我已了解</button>
+        <h4>回答正确</h4>
+        <p>查看是否已抢到直通券</p>
+        <button class="btn-blue">查看名单</button>
       </div>
     </div>
   </div>
@@ -632,7 +649,7 @@
   </div>
 </div>
 <!-- END Modal -->
-<div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel" style="display: block; padding-left: 0px;">
+<div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModalLabel">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -663,12 +680,403 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
+<!-- Complete Info Modal -->
+<div class="modal fade in" id="complateModal" tabindex="-1" role="dialog" aria-labelledby="complateModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="testModalLabel">完善个人信息</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="txt_reg_email" type="text" placeholder="邮箱">
+                    <input id="txt_reg_school" type="text" placeholder="学校全称">
+
+                    <div class="selectdate form-control">
+                        <label>毕业年份</label>
+                        <select name="year" id="year">
+                            <option>2014年</option>
+                            <option>2015年</option>
+                            <option>2016年</option>
+                            <option>2017年</option>
+                        </select>
+                        <select name="month" id="month">
+                            <option value="01">01月</option>
+                            <option value="02">02月</option>
+                            <option value="03">03月</option>
+                            <option value="04">04月</option>
+                            <option value="05">05月</option>
+                            <option value="06">06月</option>
+                            <option value="07">07月</option>
+                            <option value="08">08月</option>
+                            <option value="09">09月</option>
+                            <option value="10">10月</option>
+                            <option value="11">11月</option>
+                            <option value="12">12月</option>
+                        </select>
+                    </div>
+                    <input id="txt_reg_no" type="text" placeholder="网申号">
+                    <input type="password" placeholder="密码">
+                    <p class="hint">该密码可用于登录「8点后」网站，获得1对1求职指导</p>
+                    <a href="javascript:;" class="a-upload">选择文件 上传简历（5M内Word，pdf）
+                        <input type="file" name="" id="">
+                    </a>
+                    <div class="a-upload">
+                        <span>Resume.pdf</span> <i class="fa fa-check-circle-o pull-right"></i>
+                    </div>
+                    <p class="hint">可后续通过点击顶部登录名补充</p>
+                    <button id="btn_reg" type="button" class="btn-blue">确定</button>
+
+                </div>
+                <div class="modal-footer">
+                    <p>Powered by <a href="http://www.8dianhou.com" title="">8点后</a></p>
+                    <p>登录即表示您同意8点后<a href="http://www.8dianhou.com/doc/agreement">用户协议</a>及<a href="http://www.8dianhou.com/doc/privacy">隐私条款</a></p>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- END Modal -->
+<!-- Update Info Modal -->
+<div class="modal fade in" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="complateModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="testModalLabel">修改个人信息</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="" type="text" placeholder="姓名">
+                    <input id="txt_reg_email" type="text" placeholder="邮箱">
+                    <input id="txt_reg_school" type="text" placeholder="学校全称">
+
+                    <div class="selectdate form-control">
+                        <label>毕业年份</label>
+                        <select name="year" id="year">
+                            <option>2014年</option>
+                            <option>2015年</option>
+                            <option>2016年</option>
+                            <option>2017年</option>
+                        </select>
+                        <select name="month" id="month">
+                            <option value="01">01月</option>
+                            <option value="02">02月</option>
+                            <option value="03">03月</option>
+                            <option value="04">04月</option>
+                            <option value="05">05月</option>
+                            <option value="06">06月</option>
+                            <option value="07">07月</option>
+                            <option value="08">08月</option>
+                            <option value="09">09月</option>
+                            <option value="10">10月</option>
+                            <option value="11">11月</option>
+                            <option value="12">12月</option>
+                        </select>
+                    </div>
+                    <input id="txt_reg_no" type="text" placeholder="网申号">
+                    <a href="javascript:;" class="a-upload">选择文件 上传简历（5M内Word，pdf）
+                        <input type="file" name="" id="">
+                    </a>
+                    <div class="a-upload">
+                        <span>Resume.pdf</span> <i class="fa fa-check-circle-o pull-right"></i>
+                    </div>
+                    <button id="btn_reg" type="button" class="btn-blue">确定</button>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- END Modal -->
+<!-- Update Info Modal -->
+<div class="modal fade in" id="selectTutorModal" tabindex="-1" role="dialog" aria-labelledby="complateModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="testModalLabel">选择提问对象</h4>
+                </div>
+                <div class="modal-body">
+                    <ul id="J_Teachers" class="tutor-box row">
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/papa.png); "></figure>
+                    <span class="tutor-name">合伙人顾问团</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/ec.png); "></figure>
+                    <span class="tutor-name">德勤华东区HR</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/hk.png); "></figure>
+                    <span class="tutor-name">德勤香港HR</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/nc.png); "></figure>
+                    <span class="tutor-name">德勤华北区HR</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/scml.png); "></figure>
+                    <span class="tutor-name">德勤华南HR</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/wr.png); "></figure>
+                    <span class="tutor-name">德勤华西区HR</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/geming.png); "></figure>
+                    <span class="tutor-name">Ge Ming</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/hujian.jpg); "></figure>
+                    <span class="tutor-name">HU Jian</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/adrianchan.png); "></figure>
+                    <span class="tutor-name">Adrian Chan</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/cuiweiwei.png); "></figure>
+                    <span class="tutor-name">Cui Wei Wei</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/jeanechang.png); "></figure>
+                    <span class="tutor-name">Jeane Chang</span>
+                </div>
+
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/wushan.jpg); "></figure>
+                    <span class="tutor-name">WU Shan</span>
+                </div>
+
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/xujiao.png); "></figure>
+                    <span class="tutor-name">Xu Jiao</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/lijun.png); "></figure>
+                    <span class="tutor-name">LI Jun</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/jovenschen.png); "></figure>
+                    <span class="tutor-name">Jovens Chen</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/terencetang.png); "></figure>
+                    <span class="tutor-name">Terence Tang</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/marcosiu.png); "></figure>
+                    <span class="tutor-name">Marco Siu</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/vincentzhao.png); "></figure>
+                    <span class="tutor-name">Vincent Zhao</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/aiazhang.png); "></figure>
+                    <span class="tutor-name">Ala Zhang</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/octavianzhong.png); "></figure>
+                    <span class="tutor-name">Octavian Zhong</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/kimjin.png); "></figure>
+                    <span class="tutor-name">Kim Jin</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/jameskong.png); "></figure>
+                    <span class="tutor-name">James Kong</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/mandyyu.png); "></figure>
+                    <span class="tutor-name">Mandy Yu</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/grantpan.png); "></figure>
+                    <span class="tutor-name">Grant Pan</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/rubyjiang.png); "></figure>
+                    <span class="tutor-name">Ruby Jiang</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/totalchow.png); "></figure>
+                    <span class="tutor-name">Total Chow</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/jaimiecheung.png); "></figure>
+                    <span class="tutor-name">Jaimie Cheung</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/liangjie.png); "></figure>
+                    <span class="tutor-name">Liang Jie</span>
+                </div>
+            </div>
+        </li>
+        
+        <li class="col-xs-2">
+            <div class="tutor-card">
+                <div class="tutor-info">
+                    <figure class="avatar" style="background-image: url(http://7xl461.com2.z0.glb.qiniucdn.com/Images/teacher/yangning.png); "></figure>
+                    <span class="tutor-name">YANG Ning</span>
+                </div>
+            </div>
+        </li>
+        </ul>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- END Modal -->
     <script src="../resources/js/jquery.min.js"></script>
     <script src="../resources/js/bootstrap.min.js"></script>
     <script>
     $(document).ready(function(){
         $('#hintModal').modal();
+        //$('#updateModal').modal();
+
+        $('#selectTutorModal .tutor-card').on("click",function(){
+           $('#selectTutorModal').modal('hide');
+           $('#questionModal').modal();
+        });
+
+
         $(window).on('scroll', function(e) {
             var topValue = $(this).scrollTop();
             if(topValue > 687){
